@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+body {
+    font-family: "Pixelify Sans", sans-serif; /* Integrate the font for the entire body */
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #91e5ff !important;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 80px;
+    color: #ffff2d;
+    padding: 30px;
+    display: flex;
+    justify-content:center;
+}
+
+.container{
+    display: flex;
+}
+
+.chat-container {
+    max-width: 400px;
+    height:500px;
+    margin: 50px auto;
+    position: relative;
+    padding: 20px;
+    background-color: #00c3ff;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#chat-box {
+    font-family: "Pixelify Sans", sans-serif;
+    height: 370px;
+    overflow-y: scroll;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.chat-input{
+    display:flex;
+    gap: 10px;
+}
+#user-input {
+    width: calc(100% - 70px);
+    padding: 15px;
+    border: 1px solid #000;
+    border-radius: 5px 0 0 5px;
+}
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 50vw;
+}
+button {
+    background-color: #fff000;
+    border-radius: 15px !important;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-align: center;
+    transition: 200ms;
+    width: 25%;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-32:not(:disabled):hover,
+.button-32:not(:disabled):focus {
+    outline: 0;
+    background: #f4e603;
+    box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+}
+
+.button-32:disabled {
+    filter: saturate(0.2) opacity(0.5);
+    -webkit-filter: saturate(0.2) opacity(0.5);
+    cursor: not-allowed;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.bubble{
+    display:flex !important;
+}
+.speech-bubble {
+    position: relative;
+    width: 150px;
+    max-height: 70px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+/* Adding triangle (arrow) at the bottom left corner */
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; /* Adjust vertical position */
+    left: 15px; /* Adjust horizontal position */
+    border-width: 25px; /* Increase size of the triangle */
+    border-style: solid;
+    border-color: #ffffff transparent transparent transparent;
+    filter:drop-shadow(2px 7px 5px rgba(0, 0, 0, 0.1));
+}
+.typing-dots {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #333;
+    margin-right: 4px;
+    opacity: 0;
+    animation: dot-fade 1s infinite;
+}
+.dot:nth-child(1) {
+    animation-delay: 0.25s;
+}
+.dot:nth-child(2) {
+    animation-delay: 0.5s; /* Delay second dot by 0.5s */
+}
+.dot:nth-child(3) {
+    animation-delay: 0.75s; /* Delay third dot by 1s */
+}
+@keyframes dot-fade {
+    0%, 60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.user-name:nth-of-type(odd){
+    color: #0056b3;
+}
+.user-name:nth-of-type(even){
+    color: #91e5ff;
+}
