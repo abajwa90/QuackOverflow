@@ -28,7 +28,7 @@ Contributions are welcome! If you have ideas for improving the Virtual Rubber Du
 
 ## Credits:
 - This project was inspired by the concept of "rubber duck debugging," a popular method used by programmers to debug code by explaining it to an inanimate object.
-- Developed with ❤️ by [abajwa90]
+- Developed with ❤️ by Ameesa Bajwa(https://github.com/abajwa90)
 
 ## License:
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
